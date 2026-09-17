@@ -2,9 +2,9 @@
 #include "robotConfig.h"
 
 // left motor group
-pros::MotorGroup left_motor_group({-1, 2, -3}, pros::MotorGears::blue);
+pros::MotorGroup left_motor_group({-1, 2}, pros::MotorGears::blue);
 // right motor group
-pros::MotorGroup right_motor_group({4, -5, 6}, pros::MotorGears::green);            // , port, 
+pros::MotorGroup right_motor_group({4, -5}, pros::MotorGears::green);            // 2 ports
 
 // drivetrain settings
 lemlib::Drivetrain drivetrain(&left_motor_group, // left motor group
