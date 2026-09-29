@@ -64,7 +64,10 @@ void competition_initialize() {}
  * will be stopped. Re-enabling the robot will restart the task, not re-start it
  * from where it left off.
  */
-void autonomous() {}
+void autonomous() {
+//HOW DO U SWITCH AUTONOMOUS FILES IN THE BRAIN SCREEN
+
+}
 
 /**
  * Runs the operator control code. This function will be started in its own task
@@ -94,5 +97,19 @@ void opcontrol() {
 
         // Delay to save brain CPU resources
         pros::delay(25);
+
+        //Control buttons for our bot
+        if(master.get_digital(DIGITAL_R1))
+        {   
+            cascade.move(127);
+        }
+        else if(master.get_digital(DIGITAL_R2))
+        {
+            cascade.move(-127);
+        }
+        else
+        {
+            cascade.move(0);
+        }
     }
 }
